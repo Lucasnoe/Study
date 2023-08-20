@@ -1,0 +1,79 @@
+\hypertarget{_test_fib_8c}{}\doxysection{Test\+Fib.\+c File Reference}
+\label{_test_fib_8c}\index{TestFib.c@{TestFib.c}}
+{\ttfamily \#include \char`\"{}unity.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Fib.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_test_fib_8c_a9a8d0baaef5b17b89b2a630f39042a3b}{DIMENSION\+\_\+\+OF}}(x)~(sizeof(x)/sizeof(x\mbox{[}0\mbox{]}))
+\item 
+\#define \mbox{\hyperlink{_test_fib_8c_a4f4fd570d5a4cbe84d7384121925ea53}{FIB\+\_\+\+MAX\+\_\+\+ELEMENT}}~(45)
+\item 
+\#define \mbox{\hyperlink{_test_fib_8c_ab7614ff279760a53e3512a40317ba0c8}{TEST\+\_\+\+FIBONACCI\+\_\+\+FUNC\+\_\+1}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_test_fib_8c_a1d48080d11d4ae55106f1c60d6046392}{test\+\_\+negative\+\_\+elements\+\_\+return\+\_\+0}} (void)
+\item 
+void \mbox{\hyperlink{_test_fib_8c_aca9b0d301ca0ecc4a7b70220cbd4bfc9}{test\+\_\+differents\+\_\+elements}} (void)
+\item 
+void \mbox{\hyperlink{_test_fib_8c_ad82e9917b0a0f6f8c18368fbe173d568}{test\+\_\+part\+\_\+of\+\_\+the\+\_\+sequence}} (void)
+\item 
+void \mbox{\hyperlink{_test_fib_8c_ad8a761c87c6d9978c8ac18a15c37d23a}{test\+\_\+that\+\_\+overrun\+\_\+values}} (void)
+\item 
+\mbox{\Hypertarget{_test_fib_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_test_fib_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File containing test functions 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_test_fib_8c_a9a8d0baaef5b17b89b2a630f39042a3b}\label{_test_fib_8c_a9a8d0baaef5b17b89b2a630f39042a3b}} 
+\index{TestFib.c@{TestFib.c}!DIMENSION\_OF@{DIMENSION\_OF}}
+\index{DIMENSION\_OF@{DIMENSION\_OF}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{DIMENSION\_OF}{DIMENSION\_OF}}
+{\footnotesize\ttfamily \#define DIMENSION\+\_\+\+OF(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(sizeof(x)/sizeof(x\mbox{[}0\mbox{]}))}
+
+! Define to deinition of the macro DIMENSION\+\_\+\+OF \mbox{\Hypertarget{_test_fib_8c_a4f4fd570d5a4cbe84d7384121925ea53}\label{_test_fib_8c_a4f4fd570d5a4cbe84d7384121925ea53}} 
+\index{TestFib.c@{TestFib.c}!FIB\_MAX\_ELEMENT@{FIB\_MAX\_ELEMENT}}
+\index{FIB\_MAX\_ELEMENT@{FIB\_MAX\_ELEMENT}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{FIB\_MAX\_ELEMENT}{FIB\_MAX\_ELEMENT}}
+{\footnotesize\ttfamily \#define FIB\+\_\+\+MAX\+\_\+\+ELEMENT~(45)}
+
+! Define the maximum Fibonacci series element supported by 64-\/bit \mbox{\Hypertarget{_test_fib_8c_ab7614ff279760a53e3512a40317ba0c8}\label{_test_fib_8c_ab7614ff279760a53e3512a40317ba0c8}} 
+\index{TestFib.c@{TestFib.c}!TEST\_FIBONACCI\_FUNC\_1@{TEST\_FIBONACCI\_FUNC\_1}}
+\index{TEST\_FIBONACCI\_FUNC\_1@{TEST\_FIBONACCI\_FUNC\_1}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_FIBONACCI\_FUNC\_1}{TEST\_FIBONACCI\_FUNC\_1}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+FIBONACCI\+\_\+\+FUNC\+\_\+1~1}
+
+! Define which tests will run 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_test_fib_8c_aca9b0d301ca0ecc4a7b70220cbd4bfc9}\label{_test_fib_8c_aca9b0d301ca0ecc4a7b70220cbd4bfc9}} 
+\index{TestFib.c@{TestFib.c}!test\_differents\_elements@{test\_differents\_elements}}
+\index{test\_differents\_elements@{test\_differents\_elements}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{test\_differents\_elements()}{test\_differents\_elements()}}
+{\footnotesize\ttfamily void test\+\_\+differents\+\_\+elements (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+!\+Test differents elements \mbox{\Hypertarget{_test_fib_8c_a1d48080d11d4ae55106f1c60d6046392}\label{_test_fib_8c_a1d48080d11d4ae55106f1c60d6046392}} 
+\index{TestFib.c@{TestFib.c}!test\_negative\_elements\_return\_0@{test\_negative\_elements\_return\_0}}
+\index{test\_negative\_elements\_return\_0@{test\_negative\_elements\_return\_0}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{test\_negative\_elements\_return\_0()}{test\_negative\_elements\_return\_0()}}
+{\footnotesize\ttfamily void test\+\_\+negative\+\_\+elements\+\_\+return\+\_\+0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+!\+Test negative elements and return 0 \mbox{\Hypertarget{_test_fib_8c_ad82e9917b0a0f6f8c18368fbe173d568}\label{_test_fib_8c_ad82e9917b0a0f6f8c18368fbe173d568}} 
+\index{TestFib.c@{TestFib.c}!test\_part\_of\_the\_sequence@{test\_part\_of\_the\_sequence}}
+\index{test\_part\_of\_the\_sequence@{test\_part\_of\_the\_sequence}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{test\_part\_of\_the\_sequence()}{test\_part\_of\_the\_sequence()}}
+{\footnotesize\ttfamily void test\+\_\+part\+\_\+of\+\_\+the\+\_\+sequence (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+!tests part of the fibonacci series sequence \mbox{\Hypertarget{_test_fib_8c_ad8a761c87c6d9978c8ac18a15c37d23a}\label{_test_fib_8c_ad8a761c87c6d9978c8ac18a15c37d23a}} 
+\index{TestFib.c@{TestFib.c}!test\_that\_overrun\_values@{test\_that\_overrun\_values}}
+\index{test\_that\_overrun\_values@{test\_that\_overrun\_values}!TestFib.c@{TestFib.c}}
+\doxysubsubsection{\texorpdfstring{test\_that\_overrun\_values()}{test\_that\_overrun\_values()}}
+{\footnotesize\ttfamily void test\+\_\+that\+\_\+overrun\+\_\+values (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+!tests values that exceed the 64bits limit 

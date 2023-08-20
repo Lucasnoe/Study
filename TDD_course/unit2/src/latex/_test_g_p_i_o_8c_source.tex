@@ -1,0 +1,89 @@
+\hypertarget{_test_g_p_i_o_8c_source}{}\doxysection{Test\+GPIO.\+c}
+\label{_test_g_p_i_o_8c_source}\index{C:/Users/Lucas/Documents/TDD\_course/unit2/test/TestGPIO.c@{C:/Users/Lucas/Documents/TDD\_course/unit2/test/TestGPIO.c}}
+\mbox{\hyperlink{_test_g_p_i_o_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}unity.h"{}}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}GPIO.h"{}}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}MK20DX256.h"{}}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00009}\mbox{\hyperlink{_test_g_p_i_o_8c_afae630df1f37b6019e497a85608fd13e}{00009}}\ \textcolor{preprocessor}{\#define\ TEST\_INPUT\ 0}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00011}00011\ \textcolor{preprocessor}{\#if\ TEST\_INPUT\ ==\ 0}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00013}\mbox{\hyperlink{_test_g_p_i_o_8c_a65a40234e7ebf23bb1c09f3a80f1faa3}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_test_g_p_i_o_8c_a65a40234e7ebf23bb1c09f3a80f1faa3}{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00015}00015\ \ \ \ \ PORTC.PDDR\ =0;}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00017}00017\ \ \ \ \ GPIO\_SetPinAsOutput(0);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00018}00018\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(BIT\_TO\_MASK(0),\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00019}00019\ \ \ \ \ GPIO\_SetPinAsOutput(22);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00020}00020\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(BIT\_TO\_MASK(0)\ |\ BIT\_TO\_MASK(22),\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00021}00021\ \ \ \ \ GPIO\_SetPinAsOutput(31);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00022}00022\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(BIT\_TO\_MASK(31)|BIT\_TO\_MASK(22)|BIT\_TO\_MASK(0),\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00023}00023\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00026}\mbox{\hyperlink{_test_g_p_i_o_8c_a9184468615f366d4a9a5ec6a0a8cf370}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_test_g_p_i_o_8c_a9184468615f366d4a9a5ec6a0a8cf370}{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00028}00028\ \ \ \ \ PORTC.PDDR\ =0;}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<32;\ i++)}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00031}00031\ \ \ \ \ TEST\_ASSERT\_EQUAL(1,\ GPIO\_SetPinAsOutput(i));}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00036}\mbox{\hyperlink{_test_g_p_i_o_8c_a8d2974d4f4816cc402f1647a5e44e48c}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_test_g_p_i_o_8c_a8d2974d4f4816cc402f1647a5e44e48c}{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00038}00038\ \ \ \ \ PORTC.PDDR\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00039}00039\ \ \ \ \ GPIO\_SetPinAsOutput(32);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00040}00040\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(0,\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00043}00043\ \textcolor{preprocessor}{\#elif\ TEST\_INPUT\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00046}00046\ \textcolor{keywordtype}{void}\ test\_SetPinAsInput\_should\_ConfigurePInDirection\_UsingRegisterValues(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00048}00048\ \ \ \ \ PORTC.PDDR\ =0xFFFFFFFF;}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00050}00050\ \ \ \ \ GPIO\_SetPinAsInput(0);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00051}00051\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(\string~BIT\_TO\_MASK(0),\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00052}00052\ \ \ \ \ GPIO\_SetPinAsInput(22);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00053}00053\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(\string~(BIT\_TO\_MASK(0)\ |\ BIT\_TO\_MASK(22)),\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00054}00054\ \ \ \ \ GPIO\_SetPinAsInput(31);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00055}00055\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(\string~(BIT\_TO\_MASK(31)|BIT\_TO\_MASK(22)|BIT\_TO\_MASK(0)),\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00056}00056\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00059}00059\ \textcolor{keywordtype}{void}\ test\_SetPinAsInput\_should\_ConfigurePInDirection\_UsingFunctionReturn(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00061}00061\ \ \ \ \ PORTC.PDDR\ =0xFFFFFFFF;}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<32;\ i++)}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00064}00064\ \ \ \ \ TEST\_ASSERT\_EQUAL(1,\ GPIO\_SetPinAsInput(i));}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00069}00069\ \textcolor{keywordtype}{void}\ test\_SetPinAsInput\_should\_NotUpdatePinDirection\_when\_PinsNotValid(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00070}00070\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00071}00071\ \ \ \ \ PORTC.PDDR\ =0xFFFFFFFF;}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00072}00072\ \ \ \ \ GPIO\_SetPinAsInput(32);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00073}00073\ \ \ \ \ TEST\_ASSERT\_EQUAL\_HEX32(0xFFFFFFFF,\ PORTC.PDDR);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00076}00076\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00078}\mbox{\hyperlink{_test_g_p_i_o_8c_a840291bc02cba5474a4cb46a9b9566fe}{00078}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_test_g_p_i_o_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00079}00079\ \ \ \ \ UNITY\_BEGIN();}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00080}00080\ \textcolor{preprocessor}{\ \ \ \ \#if\ TEST\_INPUT\ ==\ 0}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00081}00081\ \ \ \ \ RUN\_TEST(\mbox{\hyperlink{_test_g_p_i_o_8c_a8d2974d4f4816cc402f1647a5e44e48c}{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid}});}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00082}00082\ \ \ \ \ RUN\_TEST(\mbox{\hyperlink{_test_g_p_i_o_8c_a65a40234e7ebf23bb1c09f3a80f1faa3}{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues}});}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00083}00083\ \ \ \ \ RUN\_TEST(\mbox{\hyperlink{_test_g_p_i_o_8c_a9184468615f366d4a9a5ec6a0a8cf370}{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn}});}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00085}00085\ \textcolor{preprocessor}{\ \ \ \ \#elif\ TEST\_INPUT\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00086}00086\ \ \ \ \ RUN\_TEST(test\_SetPinAsInput\_should\_NotUpdatePinDirection\_when\_PinsNotValid);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00087}00087\ \ \ \ \ RUN\_TEST(test\_SetPinAsInput\_should\_ConfigurePInDirection\_UsingRegisterValues);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00088}00088\ \ \ \ \ RUN\_TEST(test\_SetPinAsInput\_should\_ConfigurePInDirection\_UsingFunctionReturn);}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00089}00089\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{return}\ UNITY\_END();}
+\DoxyCodeLine{\Hypertarget{_test_g_p_i_o_8c_source_l00091}00091\ \}}
+
+\end{DoxyCode}

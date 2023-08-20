@@ -1,0 +1,85 @@
+\hypertarget{_test_g_p_i_o_8c}{}\doxysection{C\+:/\+Users/\+Lucas/\+Documents/\+TDD\+\_\+course/unit2/test/\+Test\+GPIO.c File Reference}
+\label{_test_g_p_i_o_8c}\index{C:/Users/Lucas/Documents/TDD\_course/unit2/test/TestGPIO.c@{C:/Users/Lucas/Documents/TDD\_course/unit2/test/TestGPIO.c}}
+{\ttfamily \#include \char`\"{}unity.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GPIO.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}MK20\+DX256.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_test_g_p_i_o_8c_afae630df1f37b6019e497a85608fd13e}{TEST\+\_\+\+INPUT}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_test_g_p_i_o_8c_a65a40234e7ebf23bb1c09f3a80f1faa3}{test\+\_\+\+Set\+Pin\+As\+Output\+\_\+should\+\_\+\+Configure\+PIn\+Direction\+\_\+\+Using\+Register\+Values}} (void)
+\item 
+void \mbox{\hyperlink{_test_g_p_i_o_8c_a9184468615f366d4a9a5ec6a0a8cf370}{test\+\_\+\+Set\+Pin\+As\+Output\+\_\+should\+\_\+\+Configure\+PIn\+Direction\+\_\+\+Using\+Function\+Return}} (void)
+\item 
+void \mbox{\hyperlink{_test_g_p_i_o_8c_a8d2974d4f4816cc402f1647a5e44e48c}{test\+\_\+\+Set\+Pin\+As\+Output\+\_\+should\+\_\+\+Not\+Update\+Pin\+Direction\+\_\+when\+\_\+\+Pins\+Not\+Valid}} (void)
+\item 
+int \mbox{\hyperlink{_test_g_p_i_o_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arquivo de teste do módulo GPIO 
+
+Definition in file \mbox{\hyperlink{_test_g_p_i_o_8c_source}{Test\+GPIO.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_test_g_p_i_o_8c_afae630df1f37b6019e497a85608fd13e}\label{_test_g_p_i_o_8c_afae630df1f37b6019e497a85608fd13e}} 
+\index{TestGPIO.c@{TestGPIO.c}!TEST\_INPUT@{TEST\_INPUT}}
+\index{TEST\_INPUT@{TEST\_INPUT}!TestGPIO.c@{TestGPIO.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_INPUT}{TEST\_INPUT}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+INPUT~0}
+
+
+
+Definition at line \mbox{\hyperlink{_test_g_p_i_o_8c_source_l00009}{9}} of file \mbox{\hyperlink{_test_g_p_i_o_8c_source}{Test\+GPIO.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_test_g_p_i_o_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_test_g_p_i_o_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{TestGPIO.c@{TestGPIO.c}!main@{main}}
+\index{main@{main}!TestGPIO.c@{TestGPIO.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_test_g_p_i_o_8c_source_l00078}{78}} of file \mbox{\hyperlink{_test_g_p_i_o_8c_source}{Test\+GPIO.\+c}}.
+
+\mbox{\Hypertarget{_test_g_p_i_o_8c_a9184468615f366d4a9a5ec6a0a8cf370}\label{_test_g_p_i_o_8c_a9184468615f366d4a9a5ec6a0a8cf370}} 
+\index{TestGPIO.c@{TestGPIO.c}!test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn@{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn}}
+\index{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn@{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn}!TestGPIO.c@{TestGPIO.c}}
+\doxysubsubsection{\texorpdfstring{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn()}{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingFunctionReturn()}}
+{\footnotesize\ttfamily void test\+\_\+\+Set\+Pin\+As\+Output\+\_\+should\+\_\+\+Configure\+PIn\+Direction\+\_\+\+Using\+Function\+Return (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Testa a função \char`\"{}\+Set\+Pin\+As\+Output e deve configurar a direção do Pino usando o retorno da função\char`\"{} 
+
+Definition at line \mbox{\hyperlink{_test_g_p_i_o_8c_source_l00026}{26}} of file \mbox{\hyperlink{_test_g_p_i_o_8c_source}{Test\+GPIO.\+c}}.
+
+\mbox{\Hypertarget{_test_g_p_i_o_8c_a65a40234e7ebf23bb1c09f3a80f1faa3}\label{_test_g_p_i_o_8c_a65a40234e7ebf23bb1c09f3a80f1faa3}} 
+\index{TestGPIO.c@{TestGPIO.c}!test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues@{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues}}
+\index{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues@{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues}!TestGPIO.c@{TestGPIO.c}}
+\doxysubsubsection{\texorpdfstring{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues()}{test\_SetPinAsOutput\_should\_ConfigurePInDirection\_UsingRegisterValues()}}
+{\footnotesize\ttfamily void test\+\_\+\+Set\+Pin\+As\+Output\+\_\+should\+\_\+\+Configure\+PIn\+Direction\+\_\+\+Using\+Register\+Values (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Testa a função \char`\"{}\+Set\+Pin\+As\+Output e deve configurar a direção do Pino usando os valor do registrador\char`\"{} 
+
+Definition at line \mbox{\hyperlink{_test_g_p_i_o_8c_source_l00013}{13}} of file \mbox{\hyperlink{_test_g_p_i_o_8c_source}{Test\+GPIO.\+c}}.
+
+\mbox{\Hypertarget{_test_g_p_i_o_8c_a8d2974d4f4816cc402f1647a5e44e48c}\label{_test_g_p_i_o_8c_a8d2974d4f4816cc402f1647a5e44e48c}} 
+\index{TestGPIO.c@{TestGPIO.c}!test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid@{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid}}
+\index{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid@{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid}!TestGPIO.c@{TestGPIO.c}}
+\doxysubsubsection{\texorpdfstring{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid()}{test\_SetPinAsOutput\_should\_NotUpdatePinDirection\_when\_PinsNotValid()}}
+{\footnotesize\ttfamily void test\+\_\+\+Set\+Pin\+As\+Output\+\_\+should\+\_\+\+Not\+Update\+Pin\+Direction\+\_\+when\+\_\+\+Pins\+Not\+Valid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Testa a função \char`\"{}\+Set\+Pin\+As\+Output e não deve configurar a direção do Pino se o valor de entrada não correspoder a um pino válido\char`\"{} 
+
+Definition at line \mbox{\hyperlink{_test_g_p_i_o_8c_source_l00036}{36}} of file \mbox{\hyperlink{_test_g_p_i_o_8c_source}{Test\+GPIO.\+c}}.
+
