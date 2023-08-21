@@ -1,0 +1,5 @@
+C:/Users/Lucas/STM32CubeIDE/workspace_1.11.2/stm32f411_headers/Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+../Src/adc.c:16:6:pa1_adc_Interrupt_init	8	static
+../Src/adc.c:52:6:pa1_adc_init	4	static
+../Src/adc.c:81:6:start_convertion	4	static
+../Src/adc.c:90:10:adc_read	4	static

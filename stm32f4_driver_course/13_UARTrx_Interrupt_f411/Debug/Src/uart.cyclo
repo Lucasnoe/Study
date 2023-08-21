@@ -1,0 +1,9 @@
+core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+uart.c:52:5:__io_putchar	1
+uart.c:57:6:uart2_rxtx_init	1
+uart.c:97:6:uart2_tx_init	1
+uart.c:126:17:compute_uart_bd	1
+uart.c:133:13:uart_set_baudrate	1
+uart.c:138:6:uart2_read	2
+uart.c:145:6:uart2_write	2
+uart.c:155:6:uart2_rxtx_Interrupt_init	1

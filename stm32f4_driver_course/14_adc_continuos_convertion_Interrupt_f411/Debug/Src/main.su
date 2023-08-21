@@ -1,0 +1,3 @@
+../Src/main.c:23:5:main	8	static
+../Src/main.c:37:13:ADC_callback	8	static
+../Src/main.c:43:6:ADC_IRQHandler	8	static
